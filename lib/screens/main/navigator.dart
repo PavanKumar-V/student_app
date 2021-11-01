@@ -10,7 +10,6 @@ import 'package:brindavan_student/screens/main/pages/subject_list.dart';
 import 'package:brindavan_student/screens/main/pages/theme.dart';
 import 'package:brindavan_student/services/auth.dart';
 import 'package:brindavan_student/services/database.dart';
-import 'package:brindavan_student/services/testservice.dart';
 import 'package:brindavan_student/utils/loading.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -134,7 +133,7 @@ class _NavigateState extends State<Navigate>
                             });
                           },
                         ).h(80),
-                      ).p(20),
+                      ).p(17),
                       drawer: SizedBox(
                         width: MediaQuery.of(context).size.width * 0.8,
                         child: Drawer(
@@ -269,7 +268,7 @@ class _NavigateState extends State<Navigate>
                                             leading: const Icon(Icons
                                                     .settings_accessibility_rounded)
                                                 .iconColor(Colors.white),
-                                            title: 'Devlopers'
+                                            title: 'About'
                                                 .text
                                                 .color(Colors.white)
                                                 .make(),

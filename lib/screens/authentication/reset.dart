@@ -26,7 +26,8 @@ class _ResetScreenState extends State<ResetScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: 'Password Reset'.text.make(),
+        iconTheme: const IconThemeData(color: Colors.white),
+        title: 'Password Reset'.text.white.make(),
         backgroundColor: Theme.of(context).primaryColor,
       ),
       body: Form(

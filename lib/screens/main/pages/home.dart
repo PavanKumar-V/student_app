@@ -62,6 +62,13 @@ class _HomeState extends State<Home> {
                   appBar: AppBar(
                     elevation: 0,
                     title: Row(children: [
+                      Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            'Hi, ${userData!.fullName}'.text.lg.bold.make(),
+                            userData.usn.text.uppercase.base.make(),
+                          ]),
+                      Spacer(),
                       GestureDetector(
                         onTap: () {
                           Scaffold.of(context).openDrawer();
@@ -69,26 +76,10 @@ class _HomeState extends State<Home> {
                         child: CircleAvatar(
                           backgroundColor: Colors.black12,
                           backgroundImage:
-                              CachedNetworkImageProvider(userData!.avatar),
+                              CachedNetworkImageProvider(userData.avatar),
                         ),
                       ),
-                      Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            'Hi, ${userData.fullName}'.text.lg.bold.make(),
-                            userData.usn.text.uppercase.sm.make(),
-                          ]).pOnly(left: 12),
                     ]),
-                    actions: [
-                      IconButton(
-                          onPressed: () {
-                            Scaffold.of(context).openDrawer();
-                          },
-                          icon: Icon(
-                            Icons.sort_rounded,
-                            size: 30,
-                          ))
-                    ],
                   ),
                   backgroundColor: Theme.of(context).backgroundColor,
                   body: SingleChildScrollView(
@@ -124,7 +115,7 @@ class _HomeState extends State<Home> {
                             .py12(),
                         const RecentNotification(),
                       ],
-                    ).px(20),
+                    ).px(17),
                   ),
                 );
               } else {

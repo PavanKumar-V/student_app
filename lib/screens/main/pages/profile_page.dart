@@ -22,7 +22,7 @@ class _ProfilePageState extends State<ProfilePage> {
     return Scaffold(
       appBar: AppBar(
         iconTheme: IconThemeData(color: Colors.white),
-        elevation: 0,
+       
         title: 'Profile'.text.white.center.make(),
       ),
       extendBodyBehindAppBar: true,
